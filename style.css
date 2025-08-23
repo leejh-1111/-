@@ -1,0 +1,19 @@
+/* Bootstrap, Tailwind로 대부분 스타일링. 커스텀은 애니메이션, 리스트 간격 등만 적용 */
+
+#todo-list .todo-item {
+  @apply flex items-center justify-between bg-white rounded-xl shadow p-3 transition hover:scale-[1.02] duration-150;
+  animation: fadeIn 0.4s;
+}
+#todo-list .todo-text.completed {
+  @apply line-through text-gray-400;
+}
+#todo-list .todo-actions button {
+  @apply ml-2 text-gray-400 hover:text-red-500 transition;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 입력창, 버튼 등은 Bootstrap/Tailwind로 처리 */
